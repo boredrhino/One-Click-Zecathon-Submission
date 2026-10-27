@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/oneclick/:path*",
+      "destination": "https://1click.chaindefuser.com/:path*"
+    },
+    {
+      "source": "/((?!assets/|oneclick/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

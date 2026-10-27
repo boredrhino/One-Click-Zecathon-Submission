@@ -1,0 +1,32 @@
+{
+  "name": "once",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A one-shot Orchard address for each swap into shielded ZEC.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "keys": "cargo build --release --target wasm32-unknown-unknown --manifest-path crates/once-keys/Cargo.toml --target-dir crates/once-keys/target && wasm-bindgen --target bundler --out-dir src/keys/pkg crates/once-keys/target/wasm32-unknown-unknown/release/once_keys.wasm"
+  },
+  "dependencies": {
+    "@noble/hashes": "^2.4.0",
+    "@scure/base": "^2.4.0",
+    "@scure/bip39": "^2.4.0",
+    "json-stable-stringify": "^1.3.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/json-stable-stringify": "^1.1.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}
